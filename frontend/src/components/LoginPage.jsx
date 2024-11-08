@@ -7,7 +7,6 @@ import { loginAction } from '../redux/actions';
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  // const[userData,setUserData] = useState('');
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -26,7 +25,6 @@ const LoginPage = () => {
           login(response.data); 
           localStorage.setItem("name", response.data.data.name);
           localStorage.setItem("email", response.data.data.email);
-          // setUserData(response.data);
           navigate('/dashboard'); 
         } else {
           setError('Invalid credentials'); 
@@ -34,9 +32,6 @@ const LoginPage = () => {
       }
     ))
   };
-
-  // console.log("userData ------------------------------------>",userData)
-  // localStorage.setItem("name",userData.name)
 
 
   return (

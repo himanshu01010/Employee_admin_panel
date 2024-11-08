@@ -9,8 +9,6 @@ const ProfileSection = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // You can replace this with actual user data from your auth system
-
   const name = localStorage.getItem('name');
   const email = localStorage.getItem('email')
   const user = {
@@ -23,7 +21,7 @@ const ProfileSection = () => {
     dispatch(logoutAction((response) => {
       if (response.success) {
         console.log("Logged out successfully");
-        navigate("/login");  // Redirect to login or perform any other cleanup
+        navigate("/login");  
       } else {
         console.error("Logout failed:", response.message);
       }

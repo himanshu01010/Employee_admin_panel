@@ -3,7 +3,7 @@ import * as TYPE from '../actions/types'
 const initialstate ={
     profile:null,
     emloyees:[],
-    employeeById: null,  // This will hold the single employee data fetched by ID
+    employeeById: null,  
     loading: false,
     error: null,
     totalEmployees: 0,
@@ -25,7 +25,7 @@ const userReducer = (state = initialstate , action)=>{
         case TYPE.SET_EMPLOYEE_BY_ID:
             return {
               ...prevState,
-              employeeById:payload,  // Store the employee data here
+              employeeById:payload, 
             };
         case TYPE.SET_TOTAL_EMPLOYEES:
             return {

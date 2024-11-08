@@ -1,7 +1,6 @@
-// routes/employeeRoutes.js
 import express from "express";
 import multer from "multer";
-import { v4 as uuidv4 } from "uuid"; // Import UUID
+import { v4 as uuidv4 } from "uuid"; 
 import { createEmployee,updateEmployee,getAllEmployees,getEmployeeById,deleteEmployee, getTotalEmployees} from "../controllers/employeeController.js";
 import authenticateToken from "../middleware/authenticateToken.js";
 

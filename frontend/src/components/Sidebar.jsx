@@ -36,10 +36,9 @@ const Sidebar = () => {
     { 
       icon: <Users className="w-5 h-5 mr-2" />, 
       text: 'EMPLOYEE', 
-      // path: '/orders' 
       submenu:[
         {icon:<PlusCircle className='w-5 h-5 mr-2'/>, text:'Create Employee', path:'/Employee/create'},
-        {icon:<ListOrdered className='w-5 h-5 mr-2'/>, text:'Manage Order', path:'/Employee/manage'}
+        {icon:<ListOrdered className='w-5 h-5 mr-2'/>, text:'Manage Employee', path:'/Employee/manage'}
       ]
     }
   ];
